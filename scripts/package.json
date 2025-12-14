@@ -1,0 +1,28 @@
+{
+  "name": "grid-os-neural-matrix",
+  "version": "2.0.1",
+  "description": "Киберпанк интерфейс для работы с Google Gemini AI",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --host=localhost",
+    "build": "npm run minify",
+    "minify": "npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o styles/main.min.css styles/main.css",
+    "minify:js": "terser scripts/*.js -c -m -o scripts/bundle.min.js",
+    "deploy": "npm run build && echo 'Сборка завершена'"
+  },
+  "keywords": [
+    "ai",
+    "cyberpunk",
+    "gemini",
+    "chat",
+    "interface"
+  ],
+  "author": "GRID OS Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.2"
+  }
+}
